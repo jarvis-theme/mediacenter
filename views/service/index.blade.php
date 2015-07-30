@@ -24,9 +24,10 @@
 <main id="blog" class="inner-bottom-xs">
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
-                <div class="posts sidemeta">
+            <div class="posts col-md-9">
+                <div class="post-entry">
                     <div id="list-view" class="tab-pane active">
+                        <br>
                         <article class="col-lg-12 col-md-12 col-xs-12">
                             <h4>Term of Service</h4>
                             <p>{{$service->tos}}</p>
@@ -45,22 +46,6 @@
             </div><!-- /.col -->
             <div class="col-md-3">
                 <aside class="sidebar blog-sidebar">
-                    <div class="widget clearfix">
-                        <div class="body">
-                            <form role="search" class="search-form" action="{{url('search')}}" method="post">
-                                <div class="form-group">
-                                    <label class="sr-only" for="page-search">Type your search here</label>
-                                    <input id="page-search" name="search" class="search-input form-control" type="search" placeholder="Enter Keywords...">
-                                </div>
-                                <button class="page-search-button">
-                                    <span class="fa fa-search">
-                                        <span class="sr-only">Search</span>
-                                    </span>
-                                </button><!-- /.page-search-button-->
-                            </form><!-- /.search-form -->
-                        </div>
-                    </div><!-- /.widget -->
-
                     @if(count(list_blog_category()) > 0)
                     <div class="widget">
                         <h4>Kategori Blog</h4>

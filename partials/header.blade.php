@@ -10,13 +10,13 @@
         <div class="col-xs-12 col-sm-6 no-margin">
             @if ( ! is_login() )
             <ul class="right">
-                <li><a href="#">Selamat Belanja</a></li>
+                <li><a href="#">Selamat Berbelanja</a></li>
                 <li>{{ HTML::link('member/create', 'Register',array('class'=>'loginRegLout')) }}</li>
                 <li>{{ HTML::link('member', 'Login',array('class'=>'loginRegLout')) }}</li>
             </ul>
             @else
             <ul class="right">
-                <li><a href="#">Selamat Belanja</a></li>
+                <li><a href="#">Selamat Berbelanja</a></li>
                 <li>{{ HTML::link('member', user()->nama,array('class'=>'loginRegLout')) }}</li>
                 <li>{{HTML::link('logout', 'Logout',array('class'=>'loginRegLout'))}}</li>
             </ul>
@@ -31,7 +31,7 @@
         <div class="col-xs-12 col-md-3 logo-holder">
             <!-- ============================================================= LOGO ============================================================= -->
             <div class="logo">
-                <a href="{{url('home')}}">{{HTML::image(logo_image_url(), 'Logo', array('height'=>'54'))}}</a>
+                <a href="{{url('home')}}">{{HTML::image(logo_image_url(), 'Logo', array('width'=>'230'))}}</a>
             </div><!-- /.logo -->
         </div><!-- /.logo-holder -->
 
@@ -52,7 +52,7 @@
             <div class="search-area">
                 <form action="{{url('search')}}" method="post">
                     <div class="control-group">
-                        <input class="search-field" placeholder="Search for item" name="search" required />
+                        <input class="search-field" placeholder="Cari produk atau barang" name="search" required />
                         <button class="search-button" type="submit" ></button>    
                     </div>
                 </form>

@@ -30,7 +30,7 @@
                     <div class="accordion-group">
                         <div class="accordion-heading">
                             @if(count($side_menu->anak) >= 1)
-                            <a class="accordion-toggle collapsed" data-toggle="collapse" href="#{{short_description($side_menu->nama,23)}}">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" href="#{{short_description(preg_replace('/[^a-zA-Z0-9-]/', '', $side_menu->nama),23)}}">
                              @else
                             <a class="collapsed" href="{{category_url($side_menu)}}">
                             @endif  
@@ -38,7 +38,7 @@
                             </a>
                         </div>
                         @if($side_menu->anak->count() != 0)
-                        <div id="{{short_description($side_menu->nama,23)}}" class="accordion-body collapse">
+                        <div id="{{short_description(preg_replace('/[^a-zA-Z0-9-]/', '', $side_menu->nama),23)}}" class="accordion-body collapse">
                             <div class="accordion-inner">
                                 <ul>
                                     @foreach($side_menu->anak as $submenu)
@@ -148,7 +148,7 @@
                                     <div class="ribbon blue"><span>baru</span></div>
                                 @endif
                                 <div class="image">
-                                    {{HTML::image(product_image_url($listproduk->gambar1,'medium'),'medium',array('height'=>'186'))}}
+                                    {{HTML::image(product_image_url($listproduk->gambar1,'medium'),$listproduk->nama,array('height'=>'186'))}}
                                 </div>
                                 <div class="body">
                                     <div class="label-discount green"><!-- -50% sale --></div>

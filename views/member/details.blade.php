@@ -135,6 +135,7 @@
 					</div>
 					</div>
 				@else
+					<br>
 					<span> Belum ada data order</span>
 				@endif
 			@else 

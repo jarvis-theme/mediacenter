@@ -2,13 +2,13 @@ var dirTema = document.getElementsByTagName('link')[1].getAttribute('href');
 
 require.config({
 	baseUrl: '/',
-    urlArgs: "v=001",
+    urlArgs: "v=002",
 	waitSeconds: 150,
 	shim: {
 		"bootstrap"	: {
 			deps: ['jquery'],
 		},
-		"bootstrap_dropdown"	: {
+		"bootstrap_dropdown" : {
 			deps: ['jquery'],
 		},
 		"bootstrap_slider"	: {

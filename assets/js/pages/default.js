@@ -19,6 +19,20 @@ define(['jquery','echo','wow','bootstrap','bootstrap_dropdown','browser_selector
 					unload: false
 				});
 			});
+
+			// Scroll to Top
+			$(".totop").hide();
+			$(window).scroll(function(){
+				if ($(this).scrollTop()>300){
+					$('.totop').slideDown();
+				} else{
+					$('.totop').slideUp();
+				}
+			});
+			$('.totop a').click(function (e) {
+				e.preventDefault();
+				$('body,html').animate({scrollTop: 0}, 500);
+			});
 		};
 	};
 });

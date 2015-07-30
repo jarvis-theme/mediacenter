@@ -23,15 +23,14 @@
 <main id="blog" class="inner-bottom-xs">
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
-                <div class="posts sidemeta">
+            <div class="posts col-md-9">
+                <div class="post-entry">
                     <div class="tabs-title-typical"><h1>{{$data->judul}}</h1></div>
                     <div class="tabs-description">{{$data->isi}}</div>
                 </div><!-- /.posts -->
             </div><!-- /.col -->
             <div class="col-md-3">
                 <aside class="sidebar blog-sidebar">
-                    <div class="widget clearfix"></div><!-- /.widget -->
                     @if(count(list_blog_category()) > 0)
                     <div class="widget">
                         <h4>Kategori Blog</h4>

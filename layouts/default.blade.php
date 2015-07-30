@@ -18,6 +18,9 @@
             {{ Theme::place('content') }}
             {{ Theme::partial('footer') }}
         </div>
+        <span class="totop">
+            <a href="#"><i class="fa fa-angle-up"></i></a>
+        </span>
          
         {{ Theme::partial('defaultjs') }}
         {{-- Theme::asset()->scripts() --}} 

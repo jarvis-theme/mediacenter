@@ -28,7 +28,7 @@
                     <div class="accordion-group">
                         <div class="accordion-heading">
                             @if(count($side_menu->anak) >= 1)
-                            <a class="accordion-toggle collapsed" data-toggle="collapse" href="#{{short_description($side_menu->nama,23)}}">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" href="#{{short_description(preg_replace('/[^a-zA-Z0-9-]/', '', $side_menu->nama),23)}}">
                              @else
                             <a class="collapsed" href="{{category_url($side_menu)}}">
                             @endif  
@@ -36,7 +36,7 @@
                             </a>
                         </div>
                         @if($side_menu->anak->count() != 0)
-                        <div id="{{short_description($side_menu->nama,23)}}" class="accordion-body collapse">
+                        <div id="{{short_description(preg_replace('/[^a-zA-Z0-9-]/', '', $side_menu->nama),23)}}" class="accordion-body collapse">
                             <div class="accordion-inner">
                                 <ul>
                                     @foreach($side_menu->anak as $submenu)
@@ -188,6 +188,19 @@
             </div><!-- /.page-main-content -->
             @endif
             @if(count($hasilhal) > 0 || count($hasilblog) > 0)
+            <div class="col-md-9">
+                @foreach($hasilhal as $halaman)
+                <div class="posts sidemeta">
+                    <div class="post format-image">
+                        <div class="post-content">
+                            <h1 class="border">{{$halaman->judul}}</h1>
+                            <p>{{shortDescription($halaman->isi,484)}}</p>
+                            <a href="{{blog_url($halaman)}}" class="le-button huge">Read More</a>
+                        </div><!-- /.post-content -->
+                    </div><!-- /.post -->
+                </div><!-- /.posts -->
+                @endforeach
+            </div><!-- /.col -->
             <div class="col-md-9">
                 @foreach($hasilblog as $blogs)
                 <div class="posts sidemeta">

@@ -1,46 +1,28 @@
-/*
-Template: 		Media Center
-Description: 	Responsive Electronics eCommerce Bootstrap 3 Template
-Version: 		1.0
-Author: 		Amin & Ibrahim
-Demo URI: 		http://demo.transvelo.com/media-center
-
-===================================================================================
-Table of Contents
-===================================================================================
-
-1.  General Styles
-2.  Top Navbar
-3.  Header
-4.  Sidemenu
-5.  Megamenu
-6.  Breadcrumb
-7.  Sections
-8.  Controls
-9.  Carousel
-10. Product Item
-11. Pages : Home
-12. Pages : Single Product
-13. Pages : Shopping Cart
-14. Pages : About
-15. Pages : Contact
-16. Pages : Authentication
-17. Pages : FAQ
-18. Pages : Blog
-19. Pages : Wishlist
-20. Pages : Compare
-21. Pages : 404
-22. Pages : Track Your Order
-23. Sidebar
-24. Footer
-25. Browser Fixes
-26. Responsive 
-27. Helper Classes
-*/
-
-/*===================================================================================*/
-/*  Green Color
-/*===================================================================================*/
+.search-field{color: #aeaeae;}
+.totop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 36px;
+  line-height: 100%;
+  color: #FFF;
+  padding: 3px;
+  border-radius: 3px;
+  opacity: 0.5;
+  height: 42px;
+  width: 42px;
+  text-align: center;
+  background: #59b210;
+}
+span.totop > a > i {color: #ffffff;}
+span.totop:hover {opacity: 1;}
+.shpcart {float: right;}
+.sosial-share{float: right;}
+@media (max-width: 980px) {
+  .logo {text-align: center;}
+  .shpcart {float: none;}
+  .sosial-share{margin-top: 10px;margin-left: -15px;display: inline-flex;float: none;}
+}
 .primary-bg {
   background-color: #59b210;
   color: #FFF;
@@ -340,9 +322,6 @@ h2 {
   color: #59b210;
 }
 
-/*===================================================================================*/
-/*  Helper
-/*===================================================================================*/
 .light-bg {
   background-color: #f8f8f8;
 }
@@ -520,9 +499,7 @@ h2 {
     padding-bottom: 40px;
   }
 }
-/*===================================================================================*/
-/*	GENERAL
-/*===================================================================================*/
+.logo > a > img {margin-top: -55px;margin-bottom: -70px;}
 .fontawesome {
   font-family: fontawesome;
 }
@@ -1015,9 +992,9 @@ img[src="assets/images/blank.gif"] {
   background: url("../images/ajax.gif") no-repeat scroll center center #ffffff;
   width: 100%;
 }
-/*===================================================================================*/
-/*	Top Navbar
-/*===================================================================================*/
+.contact-info .footer-logo img {margin-top: -60px;margin-bottom: -55px;}
+
+/*	Top Navbar */
 .top-bar {
   background-color: #f9f9f9;
   border-bottom: 1px solid #e0e0e0;
@@ -1067,9 +1044,7 @@ img[src="assets/images/blank.gif"] {
   display: inline-block;
   text-transform: capitalize;
 }
-/*===================================================================================*/
-/*  Header
-/*===================================================================================*/
+/*  Header */
 header {
   padding: 40px 0 31px 0;
   border-bottom: 1px solid #e0e0e0;
@@ -1190,7 +1165,7 @@ header .top-cart-row .top-cart-holder .checkout a {
 }
 header .top-cart-row .top-cart-holder .dropdown-menu {
   width: 332px;
-  left: -85px;
+  left: -155px;
   /*left: -170px;*/
   top: 65px;
   padding: 16px 0 0 0;
@@ -1271,9 +1246,7 @@ header .top-cart-row .top-cart-holder .total-price-basket {
 .header-alt {
   border-bottom: none;
 }
-/*===================================================================================*/
-/*  Sidemenu
-/*===================================================================================*/
+/*  Sidemenu */
 .sidemenu-holder {
   padding: 0;
   margin: 0;
@@ -1365,15 +1338,8 @@ header .top-cart-row .top-cart-holder .total-price-basket {
 .sidemenu-holder .side-menu nav .nav > li:nth-child(2n) {
   background-color: #f9f9f9;
 }
-/*===================================================================================*/
-/*  Megamenu
-/*===================================================================================*/
-/*!
- * Yamm!3
- * Yet another megamenu for Bootstrap 3
- * 
- * http://geedmo.github.com/yamm3
- */
+
+/* Megamenu */
 .yamm .nav,
 .yamm .collapse,
 .yamm .dropup,
@@ -1586,9 +1552,7 @@ header .top-cart-row .top-cart-holder .total-price-basket {
     opacity: 1;
   }
 }
-/*===================================================================================*/
-/*  Breadcrumb
-/*===================================================================================*/
+
 .breadcrumb-nav-holder {
   display: inline-block;
   float: left;
@@ -1695,9 +1659,7 @@ header .top-cart-row .top-cart-holder .total-price-basket {
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 27px;
 }
-/*===================================================================================*/
-/*  Sections : Blocks that appear within pages
-/*===================================================================================*/
+
 .section {
   margin: 30px 0;
 }
@@ -1757,9 +1719,7 @@ header .top-cart-row .top-cart-holder .total-price-basket {
 #grid-page-banner {
   margin: 18px 0 24px 0;
 }
-/*===================================================================================*/
-/*  Input Controls, Accordion Boxes, Price Slider, Buttons and Star Rating
-/*===================================================================================*/
+
 .radio-label {
   display: inline-block;
   font-size: 14px;
@@ -2267,7 +2227,7 @@ header .top-cart-row .top-cart-holder .total-price-basket {
 .brands-carousel .carousel-item a img {
   vertical-align: middle;
   display: inline-block;
-  height: 35px;
+  width: 130px;
 }
 /*===================================================================================*/
 /*  OWL CAROUSEL
@@ -4128,7 +4088,8 @@ header .top-cart-row .top-cart-holder .total-price-basket {
 .posts.sidemeta .date-wrapper {
   position: absolute;
   top: 0;
-  left: -90px;
+  left: -60px;
+  /*left: -90px;*/
 }
 .posts .meta {
   padding: 18px 0;

@@ -13,7 +13,7 @@
                                 <a href="{{url::to('blog')}}">Blog</a>
                             </li>
                             <li class="breadcrumb-item current gray">
-                                <a href="#">Detail Blog</a>
+                                <a href="#">{{$detailblog->judul}}</a>
                             </li>
                         </ul>
                     </li><!-- /.breadcrumb-nav-holder -->
@@ -40,9 +40,9 @@
                                 @if(!empty($detailblog->kategori->nama))
                                 <li><a href="{{blog_category_url(@$detailblog->kategori)}}">{{@$detailblog->kategori->nama}}</a></li>
                                 @endif
-                            </ul><!-- /.meta -->
+                                <div class="col-xs-12 col-sm-4 sosial-share">{{sosialShare(blog_url($detailblog))}}</div>
+                            </ul>
                             <br>
-                            {{sosialShare(blog_url($detailblog))}}
                             {{$detailblog->isi}}
                             <hr>
                             <div class="navigate comments clearfix">
@@ -68,7 +68,7 @@
             </div><!-- /.col -->
             <div class="col-md-3">
                 <aside class="sidebar blog-sidebar">
-                    <div class="widget clearfix">
+                    <!-- <div class="widget clearfix">
                         <div class="body">
                             <form role="search" class="search-form" action="{{url('search')}}" method="post">
                                 <div class="form-group">
@@ -79,10 +79,10 @@
                                     <span class="fa fa-search">
                                         <span class="sr-only">Search</span>
                                     </span>
-                                </button><!-- /.page-search-button-->
-                            </form><!-- /.search-form -->
+                                </button>
+                            </form>
                         </div>
-                    </div><!-- /.widget -->
+                    </div> -->
 
                     @if(count(list_blog_category()) > 0)
                     <div class="widget">

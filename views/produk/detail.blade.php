@@ -31,7 +31,7 @@
                     <div class="accordion-group">
                         <div class="accordion-heading">
                             @if(count($side_menu->anak) >= 1)
-                            <a class="accordion-toggle collapsed" data-toggle="collapse" href="#{{short_description($side_menu->nama,23)}}">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" href="#{{short_description(preg_replace('/[^a-zA-Z0-9-]/', '', $side_menu->nama),23)}}">
                             @else
                             <a class="collapsed" href="{{category_url($side_menu)}}">
                             @endif  
@@ -39,7 +39,7 @@
                             </a>
                         </div>
                             @if($side_menu->anak->count() != 0)
-                            <div id="{{short_description($side_menu->nama,23)}}" class="accordion-body collapse">
+                            <div id="{{short_description(preg_replace('/[^a-zA-Z0-9-]/', '', $side_menu->nama),23)}}" class="accordion-body collapse">
                                 <div class="accordion-inner">
                                     <ul>
                                         @foreach($side_menu->anak as $submenu)
@@ -112,7 +112,7 @@
                             <div class="col-xs-4 col-sm-4 no-margin">
                                 <a href="{{product_url($bestproduk)}}" class="thumb-holder">
                                     <div class="side-image">
-                                    {{HTML::image(product_image_url($bestproduk->gambar1,'gambar',array('width'=>'73')))}}
+                                    {{HTML::image(product_image_url($bestproduk->gambar1),$bestproduk->nama,array('width'=>'73'))}}
                                     </div>
                                 </a>
                             </div>
@@ -141,28 +141,28 @@
                         <div id="owl-single-product">
                             @if($produk->gambar1 != '')
                             <div class="single-product-gallery-item" id="slide1">
-                                <a data-rel="prettyphoto" href="{{url(product_image_url($produk->gambar1,'medium'))}}">
-                                    <img class="img-responsive" alt="" src="{{url(product_image_url($produk->gambar1,'large'))}}" data-echo="{{url(product_image_url($produk->gambar1,'large'))}}" />
+                                <a data-rel="prettyphoto" href="{{url(product_image_url($produk->gambar1,'large'))}}">
+                                    <img class="img-responsive" alt="{{short_description($produk->nama,150)}}" src="{{url(product_image_url($produk->gambar1,'large'))}}" data-echo="{{url(product_image_url($produk->gambar1,'large'))}}" />
                                 </a>
                             </div><!-- /.single-product-gallery-item -->
                             @endif
                             @if($produk->gambar2 != '')
                             <div class="single-product-gallery-item" id="slide2">
-                                <a data-rel="prettyphoto" href="{{url(product_image_url($produk->gambar2,'medium'))}}">
+                                <a data-rel="prettyphoto" href="{{url(product_image_url($produk->gambar2,'large'))}}">
                                     <img class="img-responsive" alt="" src="{{url(product_image_url($produk->gambar2,'large'))}}" data-echo="{{url(product_image_url($produk->gambar2,'large'))}}" />
                                 </a>
                             </div><!-- /.single-product-gallery-item -->
                             @endif
                             @if($produk->gambar3 != '')
                             <div class="single-product-gallery-item" id="slide3">
-                                <a data-rel="prettyphoto" href="{{url(product_image_url($produk->gambar3,'medium'))}}">
+                                <a data-rel="prettyphoto" href="{{url(product_image_url($produk->gambar3,'large'))}}">
                                     <img class="img-responsive" alt="" src="{{url(product_image_url($produk->gambar3,'large'))}}" data-echo="{{url(product_image_url($produk->gambar3,'large'))}}" />
                                 </a>
                             </div><!-- /.single-product-gallery-item -->
                             @endif
                             @if($produk->gambar4 != '')
                             <div class="single-product-gallery-item" id="slide4">
-                                <a data-rel="prettyphoto" href="{{url(product_image_url($produk->gambar4,'medium'))}}">
+                                <a data-rel="prettyphoto" href="{{url(product_image_url($produk->gambar4,'large'))}}">
                                     <img class="img-responsive" alt="" src="{{url(product_image_url($produk->gambar4,'large'))}}" data-echo="{{url(product_image_url($produk->gambar4,'large'))}}" />
                                 </a>
                             </div><!-- /.single-product-gallery-item -->

@@ -59,7 +59,7 @@
 
             <div class="col-md-3">
                 <aside class="sidebar blog-sidebar">
-                    <div class="widget clearfix">
+                    <!-- <div class="widget clearfix">
                         <div class="body">
                             <form role="search" class="search-form" action="{{url('search')}}" method="post">
                                 <div class="form-group">
@@ -70,10 +70,10 @@
                                     <span class="fa fa-search">
                                         <span class="sr-only">Search</span>
                                     </span>
-                                </button><!-- /.page-search-button-->
-                            </form><!-- /.search-form -->
+                                </button>
+                            </form>
                         </div>
-                    </div><!-- /.widget -->
+                    </div> -->
                     @if(count(list_blog_category()) > 0)
                     <div class="widget">
                         <h4>Kategori Blog</h4>

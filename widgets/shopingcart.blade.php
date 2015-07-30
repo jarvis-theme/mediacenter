@@ -1,4 +1,4 @@
-<div class="top-cart-holder dropdown animate-dropdown">
+<div class="top-cart-holder dropdown animate-dropdown shpcart">
     <div id="shoppingcartplace" class="basket">
         <a class="dropdown-toggle" data-toggle="dropdown" href="">
             <div class="basket-item-count">

@@ -27,6 +27,7 @@
                     <div class="tab-pane active " id="comments">
                     @if(count(list_testimonial()) > 0)
                         @foreach (list_testimonial() as $items) 
+                        <br>
                         <div class="comment-item">
                             <div class="row no-margin">
                                 <div class="col-xs-2 col-sm-1 no-margin">

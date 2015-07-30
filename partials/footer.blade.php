@@ -9,7 +9,7 @@
                 <!-- ============================================================= CONTACT INFO ============================================================= -->
                 <div class="contact-info">
                     <div class="footer-logo">
-                        <a href="{{url('home')}}">{{HTML::image(logo_image_url(), 'Logo', array('height'=>'54'))}}</a>
+                        <a href="{{url('home')}}">{{HTML::image(logo_image_url(), 'Logo', array('width'=>'233'))}}</a>
                     </div><!-- /.footer-logo -->
                     <!-- <p class="regular-bold"> Feel free to contact us via phone,email or just send us mail.</p> -->
                     <p>
@@ -79,7 +79,7 @@
                         <h3>Contact</h3>
                         <ul>
                             @if(!empty($kontak->email))
-                            <li> <a href="mailto:{{$kontak->email}}"> {{$kontak->email}}</a></li>
+                            <li><a href="mailto:{{$kontak->email}}">{{$kontak->email}}</a></li>
                             @endif
                             @if(!empty($kontak->telepon))
                             <li> <a href="#"> {{$kontak->telepon}}</a></li>
@@ -127,4 +127,5 @@
         </div><!-- /.container -->
     </div><!-- /.copyright-bar -->
 </footer>
+<a style="position: fixed; z-index: 1001; display: block;" href="#top" id="scrollUp"><i class="fa fa-angle-up"></i></a>
 {{pluginPowerup()}}

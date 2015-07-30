@@ -6,7 +6,7 @@ define(['jquery','pretty_photo','carousel'], function($)
 		self.run = function()
 		{
 			if ($('a[data-rel="prettyphoto"]').length > 0) {
-				$('a[data-rel="prettyphoto"]').prettyPhoto();
+				$('a[data-rel="prettyphoto"]').prettyPhoto({social_tools:false});
 			}
 
 			/*===================================================================================*/

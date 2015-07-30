@@ -225,7 +225,7 @@
                 @if($koleksi->gambar != '')
                 <div class="carousel-item">
                     <a title="{{$koleksi->nama}}" href="{{koleksi_url($koleksi)}}">
-                        <img alt="{{$koleksi->nama}}" src="{{koleksi_image_url($koleksi->gambar, 'original')}}" />
+                        <img alt="{{$koleksi->nama}}" src="{{koleksi_image_url($koleksi->gambar)}}" />
                     </a>
                 </div><!-- /.carousel-item -->
                 @endif
