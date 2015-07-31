@@ -142,7 +142,7 @@
                             @if($produk->gambar1 != '')
                             <div class="single-product-gallery-item" id="slide1">
                                 <a data-rel="prettyphoto" href="{{url(product_image_url($produk->gambar1,'large'))}}">
-                                    <img class="img-responsive" alt="{{short_description($produk->nama,150)}}" src="{{url(product_image_url($produk->gambar1,'large'))}}" data-echo="{{url(product_image_url($produk->gambar1,'large'))}}" />
+                                    <img class="img-responsive" alt="" src="{{url(product_image_url($produk->gambar1,'large'))}}" data-echo="{{url(product_image_url($produk->gambar1,'large'))}}" />
                                 </a>
                             </div><!-- /.single-product-gallery-item -->
                             @endif
@@ -200,7 +200,7 @@
                         </div><!-- /.gallery-thumbs -->
                     </div><!-- /.single-product-gallery -->
                 </div><!-- /.gallery-holder -->
-                <div class="no-margin col-xs-12 col-sm-7 body-holder">
+                <div class="no-margin col-xs-12 col-sm-6 col-md-6 body-holder">
                     <div class="body">
                         <div class="availability"><label>Availability:</label><span class="available"> {{$produk->stok}} in stock</span></div>
                         <div class="title"><a href="#">{{$produk->nama}}</a></div>

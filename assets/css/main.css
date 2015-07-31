@@ -3313,7 +3313,7 @@ header .top-cart-row .top-cart-holder .total-price-basket {
   width: 37%;
 }
 #single-product .body-holder {
-  width: 63%;
+  /*width: 63%;*/
 }
 #single-product .body-holder .body {
   padding: 0 37px;
@@ -3667,7 +3667,7 @@ header .top-cart-row .top-cart-holder .total-price-basket {
   width: 50%!important;
 }
 .sidebar-page .body-holder {
-  width: 50%!important;
+  /*width: 50%!important;*/
   padding: 15px 0;
 }
 .sidebar-page .body-holder .body {
@@ -5167,6 +5167,7 @@ select.top-drop-menu {
   }
   #single-product .gallery-holder {
     width: 100%;
+    margin: 0px auto;
   }
   #single-product .body-holder {
     width: 100%;
